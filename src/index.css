@@ -1,0 +1,112 @@
+/* dark: "rgb(141, 60, 30)"
+light: "rgb(212, 119, 86)"
+main: "#ca562c" */
+
+/* secondary: contrastText: "rgba(0, 0, 0, 0.87)"
+dark: "rgb(100, 141, 174)"
+light: "rgb(166, 212, 250)"
+main: "#90caf9" */
+
+/* success
+contrastText: "rgba(0, 0, 0, 0.87)"
+dark: "#388e3c"
+light: "#81c784"
+main: "#66bb6a" */
+
+.logo{
+  color: #ca562c !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.logo span{
+    font-size: 1.6rem;
+}
+.link{
+ color: rgb(212, 119, 86);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+.link:hover{
+  color: #ca562c;
+  text-decoration: underline;
+}
+.product-form{
+   min-width: 40rem;
+}
+.modal{
+    background-color: #495371;
+}
+.modal-box{
+    margin-top: 10rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.myform{
+  max-width: 40rem;
+  margin: 0 auto;
+  /* border: 3px solid #ecd5cd;
+  padding: 1.7rem;
+  border-radius: 7px;
+   */
+  /* background-color: #fcf8f7; */
+}
+.myform .btn{
+    background-color: #E45826 !important;
+    font-weight: 500;
+    border: none;
+}
+.auth{
+  border: none;
+  background-color: #fff;
+  color: #495371;
+  font-size: 1rem;
+}
+.logout-btn{
+    color: #d5d9e4;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all .5s ease;
+    display: inline;
+}
+.logout-btn:hover {
+  color: #d5d9e4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.product-card{
+    border: 3px solid #495371;
+    border-radius: 10px;
+}
+.grow{
+  flex-grow: 1;
+}
+
+.cart {
+  color: #d5d9e4;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all .5s ease;
+  display: inline;
+}
+.cart:hover {
+  color: #d5d9e4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.blue-link{
+    color: rgb(166, 212, 250);
+      text-decoration: none;
+}
+.blue-link:hover{
+    color: rgb(100, 141, 174);
+      text-decoration: underline;
+}

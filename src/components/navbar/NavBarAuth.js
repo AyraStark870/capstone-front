@@ -1,0 +1,44 @@
+import React, { useContext } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
+import { CartContext } from "../../context/cartContext";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Badge,
+  Button,
+} from "@mui/material";
+
+export const NavBarAuth = () => {
+  const { logout } = useContext(AuthContext);
+  const { cart } = useContext(CartContext);
+
+  return (
+    <>
+      {" "}
+      <AppBar position="sticky">
+        <Toolbar>
+          <Link className="logo " to="/">
+            <Typography variant="h6">My Shop</Typography>
+          </Link>
+          <div className="grow"></div>
+          <Link className="cart" to="checkout">
+            {cart.length > 0 ? (
+              <Badge color="secondary" badgeContent={cart.length}>
+                My Cart
+              </Badge>
+            ) : (
+              "My Cart"
+            )}
+          </Link>
+
+          <Button className="logout-btn" onClick={logout}>
+            logout
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </>
+  );
+};
