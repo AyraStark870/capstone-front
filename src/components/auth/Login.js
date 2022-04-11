@@ -12,7 +12,7 @@ export const Login = ({
         <form className="myform" onSubmit={handleSubmit}>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">
-              Email address
+              Email, admin@gmail to login as administrator
             </label>
             <input
               type="email"
@@ -24,7 +24,7 @@ export const Login = ({
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">
-              Password
+              Password, 123456 to login as administrator
             </label>
             <input
               type="password"
