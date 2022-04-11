@@ -35,7 +35,7 @@ export const Login = ({
             />
           </div>
           <button type="submit" class="btn btn-primary mt- mb-2">
-            Submit
+            Submit!
           </button>
           <button className="auth d-block" onClick={() => setIsLogin(false)}>
             Create new account

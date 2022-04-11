@@ -71,7 +71,6 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export function CustomizedDialogs() {
-  //const [open, setOpen] = React.useState(true);
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const { openModal, handleClose, handleOpen } = useContext(UIContext);
   const { auth } = useContext(AuthContext);
@@ -121,7 +120,7 @@ export function CustomizedDialogs() {
                   variant="outlined"
                   fullWidth
                   name="email"
-                  label="Email"
+                  label="Email, admin@gmail to login as administrator"
                   value={formValue.email}
                   inputProps={{ type: "email" }}
                   onChange={handleInputChange}
@@ -132,7 +131,7 @@ export function CustomizedDialogs() {
                   variant="outlined"
                   fullWidth
                   name="password"
-                  label="Password"
+                  label=" Password, 123456 to login as administrator"
                   value={formValue.password}
                   inputProps={{ type: "password" }}
                   onChange={handleInputChange}
