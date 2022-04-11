@@ -33,7 +33,7 @@ export const ListOfProducts = () => {
         ""
       )}
 
-      <Grid style={{ marginTop: "2px" }} container spacing={2}>
+      <Grid style={{ marginTop: "2px" }} container spacing={3}>
         {products.map((product) => (
           <Product product={product} />
         ))}

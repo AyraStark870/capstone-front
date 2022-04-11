@@ -27,14 +27,14 @@ import { ModalCheckout } from "./CheckoutModal";
 export const CartView = () => {
   const { cart } = useContext(CartContext);
   const { handleOpenCheckout } = useContext(UIContext);
-  //localhost:4000/${imageUrl}
+
   return (
     <div style={{ marginTop: "25px" }}>
       <ModalCheckout cart={cart} />
       {cart.length === 0 ? (
         <Typography>the cart is empty</Typography>
       ) : (
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
           <Grid item md={9} xs={12}>
             <CartTable cart={cart} />
           </Grid>

@@ -28,8 +28,12 @@ export const Product = ({ product }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6} md={4} key={product._id}>
-      <Card>
+    <Grid item xs={12} sm={6} md={4} lg={3} key={product._id}>
+      <Card
+        sx={{
+          marginRight: "5px",
+        }}
+      >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -42,7 +46,7 @@ export const Product = ({ product }) => {
             <Typography>{name}</Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
+        <CardActions sx={{ justifyContent: "space-between" }}>
           {userState?.user?.role === "user" && (
             <Typography>${price}</Typography>
           )}
@@ -61,7 +65,7 @@ export const Product = ({ product }) => {
               size="small"
               color="secondary"
             >
-              Add to cart!
+              Add to cart
             </Button>
           )}
         </CardActions>
