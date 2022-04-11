@@ -18,7 +18,7 @@ export const Layout = ({ children }) => {
         <NavBarAuth />
       )}
 
-      <Box sx={{ padding: "10px 200px" }}>
+      <Box sx={{ padding: "10px 50px" }}>
         <CustomizedDialogs />
         {/* <ModalAuth /> */}
         {children}

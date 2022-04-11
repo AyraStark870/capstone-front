@@ -24,18 +24,18 @@ export const Product = ({ product }) => {
     : "";
 
   const goToLogin = () => {
-    console.log("no lgeado");
     handleOpen();
   };
 
   return (
-    <Grid item md={4} key={product._id}>
+    <Grid item xs={12} sm={6} md={4} key={product._id}>
       <Card>
         <CardActionArea>
           <CardMedia
             component="img"
             image={imgUrlShow}
-            height={250}
+            height={200}
+            width={200}
             title={name}
           ></CardMedia>
           <CardContent>
@@ -61,7 +61,7 @@ export const Product = ({ product }) => {
               size="small"
               color="secondary"
             >
-              Add to cart
+              Add to cart!
             </Button>
           )}
         </CardActions>
