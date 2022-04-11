@@ -6,7 +6,7 @@ import uiReducer from "./uiReducer";
 export const UIContext = createContext({});
 
 export const ContextUIProvider = ({ children }) => {
-  const initialValue = { openModal: false, openModalCheckout: true };
+  const initialValue = { openModal: false, openModalCheckout: false };
   const [uiState, dispatch] = useReducer(uiReducer, initialValue);
 
   const handleOpen = () => {
