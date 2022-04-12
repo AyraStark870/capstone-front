@@ -16,11 +16,11 @@ main: "#66bb6a" */
 .logo{
   color: #ca562c !important;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 .logo span{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 .link{
  color: rgb(212, 119, 86);

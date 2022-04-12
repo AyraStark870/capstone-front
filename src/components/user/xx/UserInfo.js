@@ -50,7 +50,7 @@ export const UserInfo = () => {
         <List>
           <ListItem>
             <Typography component="h5" variant="h5">
-              Order History
+              Orders History
             </Typography>
           </ListItem>
           <ListItem>

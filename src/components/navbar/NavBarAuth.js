@@ -34,8 +34,8 @@ export const NavBarAuth = () => {
                 "Cart"
               )}
             </Link>
-            <Link className="account" to="user-info">
-              orders history
+            <Link className="account" to="user-orders">
+              Orders
             </Link>
 
             <Button className="logout-btn" onClick={logout}>

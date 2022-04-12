@@ -16,7 +16,7 @@ export const AppRouter = () => {
         <Route path="checkout" element={<CartView />} />
         <Route path="product/new" element={<CreateProduct />} />
         <Route path="product/:id" element={<ProductDetailed />} />
-        <Route path="user-info" element={<UserInfo />} />
+        <Route path="user-orders" element={<UserInfo />} />
       </Routes>
     </Layout>
   );
