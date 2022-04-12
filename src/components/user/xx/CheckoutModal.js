@@ -72,13 +72,6 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
-
 export function ModalCheckout({ cart }) {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const { openModalCheckout, handleCloseCheckout, handleOpenCheckout } =
@@ -110,16 +103,20 @@ export function ModalCheckout({ cart }) {
       quantity: x.qty,
       price: x.price,
     }));
-
+    let config = {
+      headers: {
+        authorization: "Bearer " + userState.user.token,
+      },
+    };
+    const data = {
+      user: userState.user._id,
+      orderItems,
+      userAddress: formValue.address,
+      numberOfItems: cart.reduce((a, x) => a + x.qty, 0),
+      total: cart.reduce((a, x) => a + x.qty * x.price, 0),
+    };
     try {
-      const data = {
-        user: userState.user._id,
-        orderItems,
-        userAddress: formValue.address,
-        numberOfItems: cart.reduce((a, x) => a + x.qty, 0),
-        total: cart.reduce((a, x) => a + x.qty * x.price, 0),
-      };
-      const res = await postsApi.post("orders", data);
+      const res = await postsApi.post("orders", data, config);
       enqueueSnackbar(
         `order successfully save in the DB, with id: ${res.data.order._id}`,
         {

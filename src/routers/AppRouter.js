@@ -5,6 +5,7 @@ import { Auth } from "../components/auth/Auth";
 import { ProductDetailed } from "../components/adminDashboard/ProductDetailed";
 import { CreateProduct } from "../components/adminDashboard/CreateProduct";
 import { CartView } from "../components/user/xx/CartView";
+import { UserInfo } from "../components/user/xx/UserInfo";
 
 export const AppRouter = () => {
   return (
@@ -15,10 +16,7 @@ export const AppRouter = () => {
         <Route path="checkout" element={<CartView />} />
         <Route path="product/new" element={<CreateProduct />} />
         <Route path="product/:id" element={<ProductDetailed />} />
-        {/* <Route path="auth" element={<Auth />} />
-        <Route path="post/:id" element={<PostDetail />} />
-        <Route path="post/:id/create-comment" element={<NewComment />} />
-        */}
+        <Route path="user-info" element={<UserInfo />} />
       </Routes>
     </Layout>
   );

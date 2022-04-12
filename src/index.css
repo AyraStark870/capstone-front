@@ -88,7 +88,7 @@ main: "#66bb6a" */
   flex-grow: 1;
 }
 
-.cart {
+.cart{
   color: #d5d9e4;
   background-color: transparent;
   border: none;
@@ -96,8 +96,24 @@ main: "#66bb6a" */
   font-size: 1.1rem;
   transition: all .5s ease;
   display: inline;
+  text-decoration: none;
 }
 .cart:hover {
+  color: #d5d9e4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.account{
+  color: #d5d9e4;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all .5s ease;
+  display: inline;
+  text-decoration: none;
+}
+.account:hover {
   color: #d5d9e4;
   text-decoration: underline;
   cursor: pointer;
@@ -109,4 +125,14 @@ main: "#66bb6a" */
 .blue-link:hover{
     color: rgb(100, 141, 174);
       text-decoration: underline;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 17rem;
+}
+.orders{
+  display: flex;
+  justify-content: center;
 }

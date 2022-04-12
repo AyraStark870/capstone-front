@@ -24,19 +24,24 @@ export const NavBarAuth = () => {
             <Typography variant="h6">My Shop</Typography>
           </Link>
           <div className="grow"></div>
-          <Link className="cart" to="checkout">
-            {cart.length > 0 ? (
-              <Badge color="secondary" badgeContent={cart.length}>
-                My Cart
-              </Badge>
-            ) : (
-              "My Cart"
-            )}
-          </Link>
+          <div className="navbar">
+            <Link className="cart" to="checkout">
+              {cart.length > 0 ? (
+                <Badge color="secondary" badgeContent={cart.length}>
+                  Cart
+                </Badge>
+              ) : (
+                "Cart"
+              )}
+            </Link>
+            <Link className="account" to="user-info">
+              orders history
+            </Link>
 
-          <Button className="logout-btn" onClick={logout}>
-            logout
-          </Button>
+            <Button className="logout-btn" onClick={logout}>
+              logout
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>
     </>

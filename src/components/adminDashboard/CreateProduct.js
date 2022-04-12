@@ -15,9 +15,11 @@ import { HandleForm } from "../../helpers/customHook";
 import postsApi from "../../helpers/postsApi";
 import { AuthContext } from "../../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 
 export const CreateProduct = ({}) => {
   const navigate = useNavigate();
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const { userState } = useContext(AuthContext);
   const [archive, setArchive] = useState("");
 
@@ -51,19 +53,23 @@ export const CreateProduct = ({}) => {
       },
     };
     try {
-      const { data } = await postsApi.post(
-        //`posts/${id}/comments/${idcomment}`,
-        `products`,
-        formData,
-        config
-      );
-      console.log(data);
-      //navigate(`products/${formValue._id}`)
-      // setEditing(false);
-      // setReload(true);
+      const { data } = await postsApi.post(`products`, formData, config);
+      enqueueSnackbar(`product successfully created`, {
+        variant: "success",
+        anchorOrigin: {
+          vertical: "top",
+          horizontal: "center",
+        },
+      });
     } catch (error) {
-      console.log(error);
-      alert(error.response?.data?.msg);
+      const alert = error.response?.data?.msg;
+      enqueueSnackbar(alert, {
+        variant: "error",
+        anchorOrigin: {
+          vertical: "top",
+          horizontal: "center",
+        },
+      });
     }
   };
   return (

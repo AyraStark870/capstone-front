@@ -44,13 +44,10 @@ export const UpdateProduct = ({ productState, setEditing, setReload }) => {
     };
     try {
       const { data } = await postsApi.put(
-        //`posts/${id}/comments/${idcomment}`,
         `products/${formValue._id}`,
         formData,
         config
       );
-      console.log(data);
-      //navigate(`products/${formValue._id}`)
       setEditing(false);
       setReload(true);
     } catch (error) {
