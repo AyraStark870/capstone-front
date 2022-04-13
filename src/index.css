@@ -42,18 +42,12 @@ main: "#66bb6a" */
 .modal-box{
     margin-top: 10rem;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
 .myform{
   max-width: 40rem;
   margin: 0 auto;
-  /* border: 3px solid #ecd5cd;
-  padding: 1.7rem;
-  border-radius: 7px;
-   */
-  /* background-color: #fcf8f7; */
 }
 .myform .btn{
     background-color: #E45826 !important;

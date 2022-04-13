@@ -1,14 +1,10 @@
 import React, { useContext, useState } from "react";
 import {
-  Grid,
-  // Link,
   List,
   ListItem,
   Typography,
   Card,
   Button,
-  //Modal,
-  // Box,
   TextField,
 } from "@mui/material";
 import { UIContext } from "../../../context/UIContext";
