@@ -31,7 +31,7 @@ export const ListOfProducts = () => {
   return (
     <>
       {userState.user?.role === "administrator" ? (
-        <Link className="link" to="product/new">
+        <Link className="link add" to="product/new">
           Add New Product
         </Link>
       ) : (

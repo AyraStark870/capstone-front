@@ -17,10 +17,10 @@ export const Search = () => {
     <Paper
       component="form"
       sx={{
-        p: "1px 2px",
         display: "flex",
         alignItems: "center",
         maxWidth: 400,
+        marginTop: "2px",
       }}
     >
       <InputBase

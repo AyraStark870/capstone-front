@@ -135,3 +135,10 @@ main: "#66bb6a" */
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 480px) {
+.add {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 8px;
+}
+}
