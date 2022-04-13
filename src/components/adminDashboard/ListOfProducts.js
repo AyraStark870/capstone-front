@@ -21,12 +21,9 @@ export const ListOfProducts = () => {
   //   setProducts(data.products);
   // };
 
-  // useEffect(() => {
-  //   if (reload) {
-  //     fetchProducts();
-  //     setReload(false);
-  //   }
-  // }, [reload]);
+  useEffect(() => {
+    setReload(true);
+  }, []);
 
   return (
     <>

@@ -35,6 +35,7 @@ export const ContextUIProvider = ({ children }) => {
       setFilteredProducts(data.products);
       setProducts(data.products);
       setLoadingProducts(false);
+      setReload(false);
     } catch (error) {
       console.log(error);
       setLoadingProducts(false);
