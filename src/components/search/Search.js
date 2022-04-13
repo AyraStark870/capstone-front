@@ -19,14 +19,15 @@ export const Search = () => {
       sx={{
         display: "flex",
         alignItems: "center",
-        maxWidth: 400,
+        width: 350,
+        maxWidth: 500,
         marginTop: "2px",
       }}
     >
       <InputBase
         onChange={handleChange}
         sx={{ ml: 1, flex: 1 }}
-        placeholder="search product by name"
+        placeholder="Search product by name"
       />
       <Divider
         sx={{ height: 28, m: 0.5, color: "#fff" }}
